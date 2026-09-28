@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.bill-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bill-header {
+    text-align: center;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.bill-header h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.bill-table th, 
+.bill-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.bill-table th {
+    background-color: #2c3e50;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.bill-table td {
+    color: #555;
+    font-size: 14px;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    border-top: 2px solid #333;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+/* Customer Details Card Styling */
+.customer-details-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.customer-details-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* Flexbox rows for inputs */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2c3e50;
+}
+
+/* Buttons Section - බට්න් අතර නිවැරදි පරතරය සහ ආකර්ෂණීය පෙනුම */
+.action-buttons-section {
+    display: flex;
+    gap: 12px; /* බට්න් තුන අතර පරතරය (Gap) ලබා දී ඇත */
+    margin-top: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-back {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.btn-back:hover {
+    background-color: #717d7e;
+}
+
+.btn-pdf {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-pdf:hover {
+    background-color: #2980b9;
+}
+
+.btn-pay {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.btn-pay:hover {
+    background-color: #219150;
+} 

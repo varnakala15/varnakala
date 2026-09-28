@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Textile - Products</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="adminlogin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#">
+            <img src="web/logo.jpg" alt="logo" class="main-logo">
+        </a>
+        <!--menu icon-->
+        <i class="bx bx-menu" id="menu-icon" ></i>
+        <!--link-->
+        <ul class="Navbar">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#customers">Custormers</a></li>
+        </ul>
+        <!--Icons-->
+        <div class="header-icon">
+            <div class="cart-container">
+                <span id="cart-count">0</span>
+                <i class="bx bx-cart cart-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="product-container">
+
+
+
+
+<!-- Product X (X වෙනුවට අංකයක් දමන්න, උදා: 6) -->
+            <div class="box">
+                <img src="web/p7.jpg" alt="" onclick="openModal(this)">
+                <h3>Product Name X</h3>
+                <div class="content">
+                    <div class="price-count">
+                        <!-- 1. Price Span එකට අංකය දෙන්න (උදා: price6) -->
+                        <span id="price6">Rs. 1000/=</span>
+                        
+                        <div class="quantity-selector">
+                            <!-- 2. Qty Input එකට අංකය දෙන්න (උදා: qty6) -->
+                            <label for="qty6">Qty:</label>
+                            <input type="number" id="qty6" class="qty-input" value="1" min="1" max="100">
+                        </div>
+
+                        <div class="size-selector">
+                            <div class="size-options">
+                                <!-- 3. සියලුම Radio buttons වල name එක සහ updatePrice එකට අංකය දෙන්න (උදා: size6, price6) -->
+                                <label><input type="radio" name="size6" value="S" data-price="1000" onchange="updatePrice('price6', 1000)"> S</label>
+                                <label><input type="radio" name="size6" value="M" data-price="1200" onchange="updatePrice('price6', 1200)" checked> M</label>
+                                <label><input type="radio" name="size6" value="L" data-price="1400" onchange="updatePrice('price6', 1400)"> L</label>
+                                <label><input type="radio" name="size6" value="XL" data-price="1600" onchange="updatePrice('price6', 1600)"> XL</label>
+                                <label><input type="radio" name="size6" value="XXL" data-price="1800" onchange="updatePrice('price6', 1800)"> XXL</label>
+                                <label><input type="radio" name="size6" value="XXXL" data-price="2000" onchange="updatePrice('price6', 2000)"> XXXL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. Add To Cart button එකට Product නම, Qty ID එක සහ Size Name එක නිවැරදිව දෙන්න -->
+                    <button class="cart-btn" onclick="addToCartDynamic('Product Name 6', 'qty6', 'size6')">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product X (X වෙනුවට අංකයක් දමන්න, උදා: 6) -->
+            <div class="box">
+                <img src="web/p8.jpg" alt="" onclick="openModal(this)">
+                <h3>Product Name X</h3>
+                <div class="content">
+                    <div class="price-count">
+                        <!-- 1. Price Span එකට අංකය දෙන්න (උදා: price6) -->
+                        <span id="price8">Rs. 1000/=</span>
+                        
+                        <div class="quantity-selector">
+                            <!-- 2. Qty Input එකට අංකය දෙන්න (උදා: qty6) -->
+                            <label for="qty8">Qty:</label>
+                            <input type="number" id="qty8" class="qty-input" value="1" min="1" max="100">
+                        </div>
+
+                        <div class="size-selector">
+                            <div class="size-options">
+                                <!-- 3. සියලුම Radio buttons වල name එක සහ updatePrice එකට අංකය දෙන්න (උදා: size6, price6) -->
+                                <label><input type="radio" name="size8" value="S" data-price="1000" onchange="updatePrice('price8', 1000)"> S</label>
+                                <label><input type="radio" name="size8" value="M" data-price="1200" onchange="updatePrice('price8', 1200)" checked> M</label>
+                                <label><input type="radio" name="size8" value="L" data-price="1400" onchange="updatePrice('price8', 1400)"> L</label>
+                                <label><input type="radio" name="size8" value="XL" data-price="1600" onchange="updatePrice('price8', 1600)"> XL</label>
+                                <label><input type="radio" name="size8" value="XXL" data-price="1800" onchange="updatePrice('price8', 1800)"> XXL</label>
+                                <label><input type="radio" name="size8" value="XXXL" data-price="2000" onchange="updatePrice('price8', 2000)"> XXXL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. Add To Cart button එකට Product නම, Qty ID එක සහ Size Name එක නිවැරදිව දෙන්න -->
+                    <button class="cart-btn" onclick="addToCartDynamic('Product Name X', 'qty8', 'size8')">Add To Cart</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Full Screen Image Modal -->
+    <div id="imageModal" class="img-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
