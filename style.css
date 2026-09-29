@@ -623,3 +623,357 @@ header{
 .product-container img:hover {
     opacity: 0.8;
 }
+
+
+
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+   ===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* General settings */
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+
+    /* HEADER */
+
+    header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .main-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    /* NAVIGATION BAR */
+
+    .Navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+        order: 3;
+    }
+
+    .Navbar a {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+
+    /* HEADER ICONS */
+
+    .header-icon {
+        font-size: 20px;
+        column-gap: 10px;
+    }
+
+
+    /* HOME SECTION */
+
+    .home {
+        width: 100%;
+        min-height: auto;
+        padding: 150px 20px 40px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .home-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .home-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    .home-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .home-img {
+        width: min(100%, 300px);
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        margin-top: 0;
+        justify-self: center;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* PRODUCT SECTION */
+
+    .product-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .product-container .box {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+    }
+
+    .product-container img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+
+    /* PRODUCT BUTTONS */
+
+    .product-container .box .content {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /* FOOTER */
+
+    .fooer {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .social {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /* SEE MORE BUTTON */
+
+    .see-more-btn-container {
+        margin-left: 0;
+        text-align: center;
+    }
+
+
+    /* FEEDBACK FORM */
+
+    .feedback-box,
+    .feedback-list {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+/* SMALL MOBILE PHONES */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .main-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .Navbar {
+        gap: 0;
+    }
+
+    .Navbar a {
+        padding: 8px 7px;
+        font-size: 0.7rem;
+    }
+
+    .home {
+        padding: 135px 15px 30px;
+    }
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-text p {
+        font-size: 0.85rem;
+    }
+
+    .home-img {
+        max-width: 260px;
+    }
+
+    .fooer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* meka danne menu icon ekata */
+
+/* =========================================
+   MOBILE GLASS MENU
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Menu Icon */
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #ffffff;
+        z-index: 1002;
+        transition: 0.3s ease;
+    }
+
+    #menu-icon:hover {
+        transform: scale(1.08);
+    }
+
+    /* Mobile Navbar */
+    .Navbar {
+        position: fixed;
+        top: 0;
+        left: -290px;
+
+        width: 270px;
+        height: 100vh;
+
+        padding: 100px 25px 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+        background: rgba(20, 20, 20, 0.82);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+        box-shadow: 5px 0 30px rgba(0, 0, 0, 0.25);
+
+        z-index: 1001;
+
+        transition: left 0.35s ease;
+    }
+
+    /* Open Menu */
+    .Navbar.active {
+        left: 0;
+    }
+
+    /* Menu Items */
+    .Navbar li {
+        list-style: none;
+        width: 100%;
+    }
+
+    .Navbar li a {
+        display: block;
+        width: 100%;
+
+        padding: 14px 16px;
+
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 500;
+
+        text-decoration: none;
+
+        border-radius: 10px;
+
+        transition:
+            background 0.25s ease,
+            padding-left 0.25s ease,
+            color 0.25s ease;
+    }
+
+    .Navbar li a:hover {
+        background: rgba(255, 255, 255, 0.12);
+        padding-left: 23px;
+    }
+
+    /* Dark transparent background behind menu */
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.35);
+
+        opacity: 0;
+        visibility: hidden;
+
+        z-index: 1000;
+
+        transition: 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE PHONES
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .Navbar {
+        width: 250px;
+        left: -270px;
+
+        padding: 90px 18px 25px;
+    }
+
+    .Navbar li a {
+        font-size: 16px;
+        padding: 13px 14px;
+    }
+
+    #menu-icon {
+        font-size: 28px;
+    }
+}
