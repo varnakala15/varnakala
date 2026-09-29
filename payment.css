@@ -175,3 +175,155 @@ body {
 .btn-pay:hover {
     background-color: #219150;
 } 
+
+
+
+/* ===================================
+   PAYMENT PAGE RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .bill-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+        margin-top: 10px;
+    }
+
+    .bill-header h2 {
+        font-size: 20px;
+    }
+
+    /* BILL TABLE */
+
+    .bill-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .bill-table th,
+    .bill-table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    /* TOTAL SECTION */
+
+    .total-section {
+        font-size: 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* CUSTOMER DETAILS */
+
+    .customer-details-card {
+        padding: 15px;
+    }
+
+    .customer-details-card h3 {
+        font-size: 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .full-width,
+    .half-width {
+        width: 100%;
+    }
+
+    .form-group input {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+ /* BUTTONS */
+    .action-buttons-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        flex: 1;
+        width: auto;
+        min-width: 120px;
+        padding: 13px 10px;
+        font-size: 15px;
+    }
+
+
+/* SMALL MOBILE PHONES */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .bill-container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .bill-header h2 {
+        font-size: 18px;
+    }
+
+    .customer-details-card {
+        padding: 12px;
+    }
+
+    .bill-table th,
+    .bill-table td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .total-section {
+        font-size: 15px;
+    }
+
+    .action-buttons-section {
+        margin-top: 20px;
+    }
+
+
+    /* BUTTONS */
+    .action-buttons-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        flex: 1;
+        width: auto;
+        min-width: 120px;
+        padding: 13px 10px;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
