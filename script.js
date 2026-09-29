@@ -422,3 +422,57 @@ function closeModal() {
         modal.style.display = "none";
     }
 }
+
+
+
+
+// =========================================
+// MOBILE MENU
+// =========================================
+
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.querySelector(".Navbar");
+const menuOverlay = document.getElementById("menu-overlay");
+
+
+// Open / Close menu
+menuIcon.addEventListener("click", function () {
+
+    navbar.classList.toggle("active");
+    menuOverlay.classList.toggle("active");
+
+    // Change menu icon
+    if (navbar.classList.contains("active")) {
+        menuIcon.classList.remove("bx-menu");
+        menuIcon.classList.add("bx-x");
+    } else {
+        menuIcon.classList.remove("bx-x");
+        menuIcon.classList.add("bx-menu");
+    }
+});
+
+
+// Close menu when overlay is clicked
+menuOverlay.addEventListener("click", function () {
+
+    navbar.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.add("bx-menu");
+});
+
+
+// Close menu when a link is clicked
+document.querySelectorAll(".Navbar a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navbar.classList.remove("active");
+        menuOverlay.classList.remove("active");
+
+        menuIcon.classList.remove("bx-x");
+        menuIcon.classList.add("bx-menu");
+    });
+
+});
