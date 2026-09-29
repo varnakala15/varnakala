@@ -1,14 +1,12 @@
-*{
-    font-family: cursive;
+* {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-padding-top: 4rms;
+    scroll-padding-top: 4rem;
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
-
-
 }
 :root{
     --main-color: #bc9667;
@@ -975,5 +973,42 @@ header{
 
     #menu-icon {
         font-size: 28px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .Navbar li a {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
     }
 }
