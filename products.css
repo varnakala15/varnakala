@@ -144,3 +144,119 @@
     accent-color: var(--main-color);
     cursor: pointer;
 }
+
+
+
+
+/* ===================================
+   PRODUCT PAGE RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 768px) {
+
+    .product-section {
+        margin-top: 90px;
+        padding: 30px 15px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 1.5rem;
+    }
+
+    .product-container .box {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 500px;
+        margin: 0 auto;
+    }
+
+    .product-container img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .product-container .box h3 {
+        font-size: 1rem;
+    }
+
+    .product-container .box .content {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .qty-input {
+        margin-top: 12px;
+    }
+
+    .size-selector {
+        margin-top: 12px;
+    }
+}
+
+
+/* ===================================
+   SMALL MOBILE PHONES
+   =================================== */
+
+@media screen and (max-width: 480px) {
+
+    .product-section {
+        margin-top: 80px;
+        padding: 20px 10px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-container .box {
+        width: 100%;
+        max-width: 100%;
+        min-height: 450px;
+        padding: 8px;
+    }
+
+    .product-container img {
+        height: 230px;
+    }
+
+    .product-container .box h3 {
+        font-size: 0.95rem;
+    }
+
+    .product-container .box .content {
+        gap: 6px;
+    }
+
+    .product-container .box .content span {
+        padding: 0.2rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .product-container .box .content .cart-btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .qty-input {
+        width: 50px;
+        margin-top: 10px;
+    }
+
+    .size-selector {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .size-options {
+        gap: 5px;
+    }
+
+    .size-options label {
+        font-size: 0.8rem;
+    }
+}
