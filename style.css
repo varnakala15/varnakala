@@ -1012,3 +1012,60 @@ header{
         font-family: 'Poppins', sans-serif;
     }
 }
+
+/* =========================================
+   SMALL MOBILE PHONES - 480px
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+        font-size: 25px;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .Navbar li a {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+    }
+
+    #menu-icon {
+        font-size: 27px;
+    }
+
+    #search-icon {
+        font-size: 22px;
+    }
+
+    .cart-icon {
+        font-size: 22px;
+    }
+
+    #cart-count {
+        font-size: 14px;
+    }
+}
