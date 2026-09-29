@@ -14,7 +14,7 @@ const userFeedbackInput = document.getElementById('userFeedback');
 const feedbackDisplay = document.getElementById('feedbackDisplay');
 
 // Google Apps Script Web App URL එක (Feedback සඳහා)
-const FEEDBACK_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsoLPqnClzzLX_RM8BtA3XxxJ2qEFMga53NBCIZDo1UlgKPCcYvSvQZgkjv1DvIGISvw/exec";
+const FEEDBACK_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxSEmP_vlrBmBVEbuKH0diswkUiuyLqQBZ5_0CgmUn-mGaybU8fEaHZh_763zjQaKqH3g/exec";
 
 
 
