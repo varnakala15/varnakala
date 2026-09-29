@@ -302,7 +302,23 @@
         </div>
     </div>
 
-
+    <!-- Admin Login Section -->
+    <section class="admin-login-section" id="admin-login">
+        <div class="admin-login-card">
+            <h3>Admin Access Only</h3>
+            <p><!--methanata danna --></p>
+            
+            <form id="indexAdminLoginForm" onsubmit="handleAdminLogin(event)">
+                <div class="input-field">
+                    <label for="adminIndexPass">Admin Password</label>
+                    <input type="password" id="adminIndexPass" placeholder="" required>
+                </div>
+                
+                <button type="submit" class="admin-login-btn">Login to Dashboard</button>
+                <p id="loginErrorMsg" class="error-msg"></p>
+            </form>
+        </div>
+    </section>
 
 
 
