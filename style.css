@@ -61,7 +61,8 @@ header{
     color: var(--bg-color);
     font-size: 1rem;
     text-transform: uppercase;
-    font-weight: 10000;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 .Navbar a:hover{
     background-color: var(--main-color);
@@ -1009,6 +1010,20 @@ header{
     }
 
     .btn {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body,
+    header,
+    .Navbar,
+    .Navbar a,
+    .header-icon,
+    .search-box,
+    button,
+    input,
+    textarea {
         font-family: 'Poppins', sans-serif;
     }
 }
