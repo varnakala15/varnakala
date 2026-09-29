@@ -16,22 +16,7 @@ const feedbackDisplay = document.getElementById('feedbackDisplay');
 // Google Apps Script Web App URL එක (Feedback සඳහා)
 const FEEDBACK_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwsoLPqnClzzLX_RM8BtA3XxxJ2qEFMga53NBCIZDo1UlgKPCcYvSvQZgkjv1DvIGISvw/exec";
 
-// 1. Function to load previously saved feedback
-function loadFeedbacks() {
-    if (!feedbackDisplay) return;
-    const savedFeedbacks = JSON.parse(localStorage.getItem('customerFeedbacks')) || [];
-    feedbackDisplay.innerHTML = '';
 
-    savedFeedbacks.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('feedback-card');
-        card.innerHTML = `
-            <h4>${item.email}</h4>
-            <p>${item.feedback}</p>
-        `;
-        feedbackDisplay.prepend(card);
-    });
-}
 
 // Page එක Load වන විට ලොග් වී ඇති පාරිභෝගිකයාගේ ඊමේල් එක Auto-fill කිරීම
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
 
 // 2. Form submission event (Feedback සඳහා)
 if (feedbackForm) {
@@ -61,22 +47,17 @@ if (feedbackForm) {
             feedback: feedback
         };
 
-        // Local Storage එකට Save කිරීම
-        const savedFeedbacks = JSON.parse(localStorage.getItem('customerFeedbacks')) || [];
-        savedFeedbacks.push(newFeedback);
-        localStorage.setItem('customerFeedbacks', JSON.stringify(savedFeedbacks));
-
         let modal = document.getElementById('feedbackModal');
         let loadingState = document.getElementById('feedbackLoadingState');
         let successState = document.getElementById('feedbackSuccessState');
-        
+
         if (modal) {
             modal.style.display = 'flex';
             if (loadingState) loadingState.style.display = 'block';
             if (successState) successState.style.display = 'none';
         }
 
-        // Google Sheet එකට යැවීම
+        // Google Sheet එකට පමණක් Feedback යැවීම
         fetch(FEEDBACK_WEB_APP_URL, {
             method: "POST",
             mode: "no-cors",
@@ -86,13 +67,15 @@ if (feedbackForm) {
         .then(() => {
             if (loadingState) loadingState.style.display = 'none';
             if (successState) successState.style.display = 'block';
-            if (userFeedbackInput) userFeedbackInput.value = '';
-            loadFeedbacks();
+
+            if (userFeedbackInput) {
+                userFeedbackInput.value = '';
+            }
         })
         .catch(error => {
             if (modal) modal.style.display = 'none';
             console.error("දෝෂයක් ඇතිවිය:", error);
-            alert('යමක් වැරදී ඇත. කරුණාකර නැවත උත්සාහ කරන්න.');
+            alert('something is wrong, please try again');
         });
     });
 }
@@ -394,7 +377,6 @@ function closeSuccessAndRedirect() {
 // Page load event
 document.addEventListener('DOMContentLoaded', () => {
     updateCartIcon();
-    loadFeedbacks();
     renderBill();
 
     let cartContainer = document.querySelector('.cart-container');
