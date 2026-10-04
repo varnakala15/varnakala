@@ -1,0 +1,651 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VarnaKala - Category Products</title>
+
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="icon" type="image/jpeg" href="web/logo.jpg">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <header>
+
+        <a href="index.html">
+            <img src="web/logo.jpg" alt="VarnaKala Logo" class="main-logo">
+        </a>
+
+
+        <!-- Menu Icon -->
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+
+        <!-- Navigation -->
+
+        <ul class="Navbar">
+
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#products">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#customers">
+                    Customers
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- Cart -->
+
+        <div class="header-icon">
+
+            <div class="cart-container">
+
+                <span id="cart-count">0</span>
+
+                <i class="bx bx-cart cart-icon"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- POLO SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="polo-section">
+
+        <h2>Polo Products</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ========================= -->
+            <!-- POLO PRODUCT 01 -->
+            <!-- ========================= -->
+
+            <div class="box">
+
+                <img
+                    src="product/p7.jpg"
+                    alt="Polo Product 01"
+                    onclick="openModal(this)">
+
+
+                <h3>BNFA4007</h3>
+
+
+                <div class="content">
+
+                    <div class="price-count">
+
+                        <span id="price7">
+                            Rs. 1200/=
+                        </span>
+
+
+                        <div class="quantity-selector">
+
+                            <label for="qty7">
+                                Qty:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="qty7"
+                                class="qty-input"
+                                value="1"
+                                min="1"
+                                max="100">
+
+                        </div>
+
+
+                        <div class="size-selector">
+
+                            <div class="size-options">
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="S"
+                                        data-price="1000"
+                                        onchange="updatePrice('price7', 1000)">
+                                    S
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="M"
+                                        data-price="1200"
+                                        onchange="updatePrice('price7', 1200)"
+                                        checked>
+                                    M
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="L"
+                                        data-price="1400"
+                                        onchange="updatePrice('price7', 1400)">
+                                    L
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="XL"
+                                        data-price="1600"
+                                        onchange="updatePrice('price7', 1600)">
+                                    XL
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="XXL"
+                                        data-price="1800"
+                                        onchange="updatePrice('price7', 1800)">
+                                    XXL
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size7"
+                                        value="XXXL"
+                                        data-price="2000"
+                                        onchange="updatePrice('price7', 2000)">
+                                    XXXL
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCartDynamic('Polo BNFA4007', 'qty7', 'size7')">
+
+                        Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- POLO PRODUCT 02 -->
+            <!-- ========================= -->
+
+            <div class="box">
+
+                <img
+                    src="product/p8.jpg"
+                    alt="Polo Product 02"
+                    onclick="openModal(this)">
+
+
+                <h3>BNFA4008</h3>
+
+
+                <div class="content">
+
+                    <div class="price-count">
+
+                        <span id="price8">
+                            Rs. 1200/=
+                        </span>
+
+
+                        <div class="quantity-selector">
+
+                            <label for="qty8">
+                                Qty:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="qty8"
+                                class="qty-input"
+                                value="1"
+                                min="1"
+                                max="100">
+
+                        </div>
+
+
+                        <div class="size-selector">
+
+                            <div class="size-options">
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="S"
+                                        data-price="1000"
+                                        onchange="updatePrice('price8', 1000)">
+                                    S
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="M"
+                                        data-price="1200"
+                                        onchange="updatePrice('price8', 1200)"
+                                        checked>
+                                    M
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="L"
+                                        data-price="1400"
+                                        onchange="updatePrice('price8', 1400)">
+                                    L
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="XL"
+                                        data-price="1600"
+                                        onchange="updatePrice('price8', 1600)">
+                                    XL
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="XXL"
+                                        data-price="1800"
+                                        onchange="updatePrice('price8', 1800)">
+                                    XXL
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="size8"
+                                        value="XXXL"
+                                        data-price="2000"
+                                        onchange="updatePrice('price8', 2000)">
+                                    XXXL
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCartDynamic('Polo BNFA4008', 'qty8', 'size8')">
+
+                        Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- ADD MORE POLO PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- T-SHIRT SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="tshirt-section">
+
+        <h2>T-Shirt Products</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ================================================= -->
+            <!-- ADD T-SHIRT PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+            <!-- Example:
+
+            <div class="box">
+
+                YOUR T-SHIRT PRODUCT CODE HERE
+
+            </div>
+
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- SHIRT SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="shirt-section">
+
+        <h2>Shirt Products</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ================================================= -->
+            <!-- ADD SHIRT PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+            <!-- Example:
+
+            <div class="box">
+
+                YOUR SHIRT PRODUCT CODE HERE
+
+            </div>
+
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- DTF SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="dtf-section">
+
+        <h2>DTF Printing</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ================================================= -->
+            <!-- ADD DTF PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+            <!-- Example:
+
+            <div class="box">
+
+                YOUR DTF PRODUCT CODE HERE
+
+            </div>
+
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- EMBROIDERY SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="embroidery-section">
+
+        <h2>Embroidery</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ================================================= -->
+            <!-- ADD EMBROIDERY PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+            <!-- Example:
+
+            <div class="box">
+
+                YOUR EMBROIDERY PRODUCT CODE HERE
+
+            </div>
+
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- SUBLIMATION SECTION -->
+    <!-- ================================================= -->
+
+    <section class="product-section category-section" id="sublimation-section">
+
+        <h2>Sublimation</h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ================================================= -->
+            <!-- ADD SUBLIMATION PRODUCTS HERE -->
+            <!-- ================================================= -->
+
+
+            <!-- Example:
+
+            <div class="box">
+
+                YOUR SUBLIMATION PRODUCT CODE HERE
+
+            </div>
+
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- CUSTOM SECTION -->
+    <!-- ================================================= -->
+
+
+
+
+
+    <!-- ================================================= -->
+    <!-- FULL SCREEN IMAGE MODAL -->
+    <!-- ================================================= -->
+
+    <div
+        id="imageModal"
+        class="img-modal"
+        onclick="closeModal()">
+
+        <span class="close-modal">
+            &times;
+        </span>
+
+        <img
+            class="modal-content"
+            id="fullImage">
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        // Get category from URL
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const category =
+            params.get("category");
+
+
+        // Hide all category sections
+
+        const sections =
+            document.querySelectorAll(".category-section");
+
+
+        sections.forEach(section => {
+
+            section.style.display = "none";
+
+        });
+
+
+        // Show selected category
+
+        if (category) {
+
+            const selectedSection =
+                document.getElementById(
+                    category + "-section"
+                );
+
+
+            if (selectedSection) {
+
+                selectedSection.style.display = "block";
+
+            }
+
+        }
+
+        else {
+
+            // Default category
+
+            document.getElementById(
+                "polo-section"
+            ).style.display = "block";
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
+```

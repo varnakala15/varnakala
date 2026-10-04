@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VarnaKala - Customize</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="web/logo.jpg">
+
+
+    <style>
+
+        /* ================================================= */
+        /* BASIC */
+        /* ================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: #f5f5f5;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+
+        /* ================================================= */
+        /* CUSTOM PAGE */
+        /* ================================================= */
+
+        .custom-page {
+            width: 100%;
+            padding-top: 110px;
+            padding-bottom: 60px;
+        }
+
+
+        /* ================================================= */
+        /* CATEGORY TABS */
+        /* ================================================= */
+
+        .custom-category-tabs {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            padding: 15px 20px;
+
+            margin-bottom: 40px;
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .custom-tab {
+            border: none;
+
+            background: #eeeeee;
+
+            color: #222;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        .custom-tab:hover {
+            background: #ddd;
+        }
+
+
+        .custom-tab.active {
+            background: #222;
+            color: #fff;
+        }
+
+
+        /* ================================================= */
+        /* CATEGORY SECTION */
+        /* ================================================= */
+
+        .custom-category {
+            display: none;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+        }
+
+
+        .custom-category.active {
+            display: block;
+        }
+
+
+        /* ================================================= */
+        /* PRODUCTS CONTAINER */
+        /* ================================================= */
+
+        .custom-products-container {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+        }
+
+
+        /* ================================================= */
+        /* CUSTOM PRODUCT */
+        /* ================================================= */
+
+        .custom-product {
+            width: 400px;
+
+            max-width: 100%;
+
+            min-height: 500px;
+
+            background: #ffffff;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.10);
+
+            padding-bottom: 25px;
+        }
+
+
+        /* ================================================= */
+        /* PRODUCT IMAGE */
+        /* ================================================= */
+
+        .custom-product-image {
+            position: relative;
+
+            width: 100%;
+
+            height: 400px;
+
+            overflow: hidden;
+
+            background: #eee;
+        }
+
+
+        .custom-product-image img {
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* ================================================= */
+        /* PLUS BUTTON */
+        /* ================================================= */
+
+        .custom-plus-button {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 65px;
+            height: 65px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            color: #222;
+
+            font-size: 40px;
+
+            font-weight: 300;
+
+            line-height: 65px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.25);
+
+            transition: 0.3s;
+
+            z-index: 2;
+        }
+
+
+        .custom-plus-button:hover {
+            transform:
+                translate(-50%, -50%)
+                scale(1.08);
+        }
+
+
+        /* ================================================= */
+        /* PRODUCT TITLE */
+        /* ================================================= */
+
+        .custom-product-title {
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            margin-top: 20px;
+
+            padding: 0 10px;
+
+            color: #222;
+        }
+
+
+        /* ================================================= */
+        /* CUSTOM FORM */
+        /* ================================================= */
+
+        .custom-form {
+            display: none;
+
+            width: 100%;
+
+            padding: 25px;
+        }
+
+
+        .custom-form.open {
+            display: block;
+        }
+
+
+        /* ================================================= */
+        /* FORM TITLE */
+        /* ================================================= */
+
+        .custom-form-title {
+            width: 100%;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+
+            color: #222;
+        }
+
+
+        /* ================================================= */
+        /* FILE INPUT */
+        /* ================================================= */
+
+        .custom-file-input {
+            display: block;
+
+            width: 100%;
+
+            max-width: 100%;
+
+            padding: 10px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            background: #fafafa;
+
+            margin-bottom: 25px;
+
+            cursor: pointer;
+
+            font-size: 13px;
+        }
+
+
+        /* ================================================= */
+        /* DESCRIPTION */
+        /* ================================================= */
+
+        .custom-description {
+            display: block;
+
+            width: 100%;
+
+            max-width: 100%;
+
+            min-height: 100px;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            resize: vertical;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+            margin-bottom: 25px;
+        }
+
+
+        .custom-description:focus {
+            border-color: #222;
+        }
+
+
+        /* ================================================= */
+        /* SIZE ROW */
+        /* ================================================= */
+
+        .custom-size-row {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 12px;
+
+            padding: 5px 0;
+        }
+
+
+        .custom-size-name {
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+
+        .custom-size-quantity {
+            width: 80px;
+
+            min-width: 80px;
+
+            height: 38px;
+
+            padding: 6px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* ================================================= */
+        /* BUTTONS */
+        /* ================================================= */
+
+        .custom-form-buttons {
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+
+        .custom-add-cart-button,
+        .custom-close-button {
+            width: 100%;
+
+            min-height: 44px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+
+        .custom-add-cart-button {
+            padding: 12px;
+
+            border: none;
+
+            background: #222;
+
+            color: #fff;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        .custom-add-cart-button:hover {
+            background: #444;
+        }
+
+
+        .custom-close-button {
+            padding: 10px;
+
+            border: 1px solid #ccc;
+
+            background: #fff;
+
+            color: #222;
+
+            transition: 0.3s;
+        }
+
+
+        .custom-close-button:hover {
+            background: #eee;
+        }
+
+
+        /* ================================================= */
+        /* EMPTY CATEGORY */
+        /* ================================================= */
+
+        .custom-empty {
+            width: 100%;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            color: #777;
+
+            font-size: 16px;
+        }
+
+
+        /* ================================================= */
+        /* TABLET / MOBILE */
+        /* ================================================= */
+
+        @media (max-width: 768px) {
+
+            .custom-page {
+                padding-top: 100px;
+
+                padding-left: 10px;
+
+                padding-right: 10px;
+            }
+
+
+            .custom-category-tabs {
+                width: 100%;
+
+                gap: 8px;
+
+                padding: 12px 8px;
+
+                margin-bottom: 25px;
+            }
+
+
+            .custom-tab {
+                padding: 9px 14px;
+
+                font-size: 13px;
+
+                white-space: nowrap;
+            }
+
+
+            .custom-category {
+                padding: 0;
+            }
+
+
+            .custom-products-container {
+                width: 100%;
+
+                gap: 20px;
+            }
+
+
+            .custom-product {
+                width: 100%;
+
+                max-width: 400px;
+
+                min-height: auto;
+            }
+
+
+            .custom-product-image {
+                width: 100%;
+
+                height: 330px;
+            }
+
+
+            .custom-product-title {
+                font-size: 18px;
+
+                margin-top: 16px;
+            }
+
+
+            .custom-form {
+                padding: 20px;
+            }
+
+
+            .custom-file-input {
+                font-size: 12px;
+            }
+
+
+            .custom-description {
+                font-size: 13px;
+
+                min-height: 95px;
+            }
+
+
+            .custom-size-row {
+                margin-bottom: 10px;
+            }
+
+
+            .custom-size-name {
+                font-size: 14px;
+            }
+
+
+            .custom-size-quantity {
+                width: 75px;
+
+                min-width: 75px;
+
+                height: 38px;
+            }
+
+        }
+
+
+        /* ================================================= */
+        /* SMALL MOBILE */
+        /* ================================================= */
+
+        @media (max-width: 480px) {
+
+            .custom-page {
+                width: 100%;
+
+                padding-top: 95px;
+
+                padding-left: 8px;
+
+                padding-right: 8px;
+
+                padding-bottom: 40px;
+            }
+
+
+            .custom-category-tabs {
+                width: 100%;
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 8px;
+
+                padding: 10px;
+
+                margin-bottom: 25px;
+            }
+
+
+            .custom-tab {
+                width: 100%;
+
+                padding: 10px 5px;
+
+                font-size: 12px;
+
+                white-space: normal;
+
+                text-align: center;
+            }
+
+
+            .custom-category {
+                width: 100%;
+
+                padding: 0;
+            }
+
+
+            .custom-products-container {
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+
+                gap: 20px;
+            }
+
+
+            .custom-product {
+                width: 100%;
+
+                max-width: 100%;
+
+                border-radius: 8px;
+
+                padding-bottom: 20px;
+            }
+
+
+            .custom-product-image {
+                width: 100%;
+
+                height: 280px;
+            }
+
+
+            .custom-plus-button {
+                width: 55px;
+
+                height: 55px;
+
+                font-size: 34px;
+
+                line-height: 55px;
+            }
+
+
+            .custom-product-title {
+                font-size: 16px;
+
+                margin-top: 15px;
+
+                padding: 0 5px;
+            }
+
+
+            .custom-form {
+                width: 100%;
+
+                padding: 15px;
+            }
+
+
+            .custom-form-title {
+                font-size: 14px;
+
+                margin-bottom: 8px;
+            }
+
+
+            .custom-file-input {
+                width: 100%;
+
+                padding: 8px;
+
+                font-size: 11px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .custom-description {
+                width: 100%;
+
+                min-height: 90px;
+
+                padding: 10px;
+
+                font-size: 12px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .custom-size-row {
+                width: 100%;
+
+                display: flex;
+
+                justify-content: space-between;
+
+                align-items: center;
+
+                gap: 10px;
+
+                margin-bottom: 9px;
+            }
+
+
+            .custom-size-name {
+                font-size: 13px;
+            }
+
+
+            .custom-size-quantity {
+                width: 70px;
+
+                min-width: 70px;
+
+                height: 36px;
+
+                font-size: 13px;
+            }
+
+
+            .custom-form-buttons {
+                width: 100%;
+
+                gap: 8px;
+
+                margin-top: 20px;
+            }
+
+
+            .custom-add-cart-button,
+            .custom-close-button {
+                width: 100%;
+
+                min-height: 44px;
+
+                font-size: 13px;
+            }
+
+
+            .custom-empty {
+                padding: 45px 15px;
+
+                font-size: 14px;
+            }
+
+        }
+
+
+        /* ================================================= */
+        /* VERY SMALL PHONES */
+        /* ================================================= */
+
+        @media (max-width: 360px) {
+
+            .custom-page {
+                padding-left: 5px;
+
+                padding-right: 5px;
+            }
+
+
+            .custom-category-tabs {
+                padding: 8px;
+
+                gap: 6px;
+            }
+
+
+            .custom-tab {
+                padding: 9px 3px;
+
+                font-size: 11px;
+            }
+
+
+            .custom-product-image {
+                height: 250px;
+            }
+
+
+            .custom-product-title {
+                font-size: 15px;
+            }
+
+
+            .custom-form {
+                padding: 12px;
+            }
+
+
+            .custom-size-name {
+                font-size: 12px;
+            }
+
+
+            .custom-size-quantity {
+                width: 65px;
+
+                min-width: 65px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- HEADER / NAVBAR -->
+    <!-- ================================================= -->
+
+    <header>
+
+        <a href="index.html">
+            <img
+                src="web/logo.jpg"
+                alt="VarnaKala Logo"
+                class="main-logo">
+        </a>
+
+
+        <i
+            class="bx bx-menu"
+            id="menu-icon">
+        </i>
+
+
+        <ul class="Navbar">
+
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#products">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#customers">
+                    Customers
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- CART -->
+
+        <div class="header-icon">
+
+            <div class="cart-container">
+
+                <span id="cart-count">
+                    0
+                </span>
+
+                <i class="bx bx-cart cart-icon"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- CUSTOM PAGE -->
+    <!-- ================================================= -->
+
+    <main class="custom-page">
+
+
+        <!-- ================================================= -->
+        <!-- CATEGORY TABS -->
+        <!-- ================================================= -->
+
+        <div class="custom-category-tabs">
+
+            <button
+                class="custom-tab active"
+                data-category="dtf-category">
+
+                DTF
+
+            </button>
+
+
+            <button
+                class="custom-tab"
+                data-category="screen-category">
+
+                Screen Printing
+
+            </button>
+
+
+            <button
+                class="custom-tab"
+                data-category="embroidery-category">
+
+                Embroidery
+
+            </button>
+
+
+            <button
+                class="custom-tab"
+                data-category="sublimation-category">
+
+                Sublimation
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- DTF CATEGORY -->
+        <!-- ================================================= -->
+
+        <section
+            id="dtf-category"
+            class="custom-category active">
+
+
+            <div class="custom-products-container">
+
+
+                <!-- CUSTOM DTF PRODUCT -->
+
+                <div class="custom-product">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="custom-product-image">
+
+                        <img
+                            src="product/dtf.jpg"
+                            alt="Custom DTF Product">
+
+
+                        <!-- PLUS BUTTON -->
+
+                        <button
+                            type="button"
+                            class="custom-plus-button"
+                            onclick="openCustomForm(this)">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- TITLE -->
+
+                    <h3 class="custom-product-title">
+
+                        CUSTOM YOUR PRODUCT
+
+                    </h3>
+
+
+
+                    <!-- ================================================= -->
+                    <!-- CUSTOM FORM -->
+                    <!-- ================================================= -->
+
+                    <div class="custom-form">
+
+
+                        <h4 class="custom-form-title">
+
+                            Choose Your Design
+
+                        </h4>
+
+
+                        <!-- FILE -->
+
+                        <input
+                            type="file"
+                            class="custom-file-input"
+                            accept="image/*">
+
+
+
+                        <!-- DESCRIPTION -->
+
+                        <h4 class="custom-form-title">
+
+                            Description
+
+                        </h4>
+
+
+                        <textarea
+                            class="custom-description"
+                            placeholder="Describe your design...">
+                        </textarea>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- SIZES -->
+                        <!-- ================================================= -->
+
+                        <h4 class="custom-form-title">
+
+                            Quantity by Size
+
+                        </h4>
+
+
+                        <!-- SMALL -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                Small
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="Small"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+                        <!-- MEDIUM -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                Medium
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="Medium"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+                        <!-- LARGE -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                Large
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="Large"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+                        <!-- XL -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                XL
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="XL"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+                        <!-- XXL -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                XXL
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="XXL"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+                        <!-- XXXL -->
+
+                        <div class="custom-size-row">
+
+                            <span class="custom-size-name">
+                                XXXL
+                            </span>
+
+                            <input
+                                type="number"
+                                class="custom-size-quantity"
+                                data-size="XXXL"
+                                value="0"
+                                min="0">
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- BUTTONS -->
+                        <!-- ================================================= -->
+
+                        <div class="custom-form-buttons">
+
+
+                            <!-- ADD TO CART -->
+
+                            <button
+                                type="button"
+                                class="custom-add-cart-button"
+                                onclick="addCustomProduct(this)">
+
+                                Add To Cart
+
+                            </button>
+
+
+                            <!-- CLOSE -->
+
+                            <button
+                                type="button"
+                                class="custom-close-button"
+                                onclick="closeCustomForm(this)">
+
+                                Close
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- SCREEN PRINTING -->
+        <!-- ================================================= -->
+
+        <section
+            id="screen-category"
+            class="custom-category">
+
+
+            <div class="custom-products-container">
+
+                <div class="custom-empty">
+
+                    Screen Printing products will be added soon.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- EMBROIDERY -->
+        <!-- ================================================= -->
+
+        <section
+            id="embroidery-category"
+            class="custom-category">
+
+
+            <div class="custom-products-container">
+
+                <div class="custom-empty">
+
+                    Embroidery products will be added soon.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- SUBLIMATION -->
+        <!-- ================================================= -->
+
+        <section
+            id="sublimation-category"
+            class="custom-category">
+
+
+            <div class="custom-products-container">
+
+                <div class="custom-empty">
+
+                    Sublimation products will be added soon.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script src="script.js"></script>
+
+
+    <!-- ================================================= -->
+    <!-- CUSTOM PAGE JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script>
+
+        /* =============================================== */
+        /* CATEGORY TAB SWITCHING */
+        /* =============================================== */
+
+        const customTabs =
+            document.querySelectorAll(".custom-tab");
+
+        const customCategories =
+            document.querySelectorAll(".custom-category");
+
+
+        customTabs.forEach(function(tab) {
+
+            tab.addEventListener("click", function() {
+
+                const categoryId =
+                    this.getAttribute("data-category");
+
+
+                /* Remove active from all tabs */
+
+                customTabs.forEach(function(item) {
+
+                    item.classList.remove("active");
+
+                });
+
+
+                /* Remove active from all categories */
+
+                customCategories.forEach(function(section) {
+
+                    section.classList.remove("active");
+
+                });
+
+
+                /* Add active to selected tab */
+
+                this.classList.add("active");
+
+
+                /* Show selected category */
+
+                const selectedCategory =
+                    document.getElementById(categoryId);
+
+
+                if (selectedCategory) {
+
+                    selectedCategory.classList.add("active");
+
+                }
+
+            });
+
+        });
+
+
+
+        /* =============================================== */
+        /* OPEN CUSTOM FORM */
+        /* =============================================== */
+
+        function openCustomForm(button) {
+
+            const product =
+                button.closest(".custom-product");
+
+
+            if (!product) {
+                return;
+            }
+
+
+            const form =
+                product.querySelector(".custom-form");
+
+
+            if (form) {
+
+                form.classList.add("open");
+
+            }
+
+
+            button.style.display = "none";
+
+        }
+
+
+
+        /* =============================================== */
+        /* CLOSE CUSTOM FORM */
+        /* =============================================== */
+
+        function closeCustomForm(button) {
+
+            const product =
+                button.closest(".custom-product");
+
+
+            if (!product) {
+                return;
+            }
+
+
+            const form =
+                product.querySelector(".custom-form");
+
+
+            const plusButton =
+                product.querySelector(".custom-plus-button");
+
+
+            if (form) {
+
+                form.classList.remove("open");
+
+            }
+
+
+            if (plusButton) {
+
+                plusButton.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

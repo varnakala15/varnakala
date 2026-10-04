@@ -1,0 +1,180 @@
+/* ========================= */
+/* CATEGORY PAGE */
+/* ========================= */
+
+.categories-section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 120px 5% 50px;
+
+    text-align: center;
+
+}
+
+
+.categories-title {
+
+    font-size: 2rem;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ========================= */
+/* CATEGORY CONTAINER */
+/* ========================= */
+
+.categories-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* ========================= */
+/* CATEGORY CARD */
+/* ========================= */
+
+.category-card {
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.category-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.category-card a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    display: block;
+
+}
+
+
+/* ========================= */
+/* CATEGORY IMAGE */
+/* ========================= */
+
+.category-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ========================= */
+/* CATEGORY NAME */
+/* ========================= */
+
+.category-card h3 {
+
+    padding: 18px 10px;
+
+    margin: 0;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .categories-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .categories-section {
+
+        padding:
+            100px 20px 40px;
+
+    }
+
+
+    .categories-title {
+
+        font-size: 1.6rem;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .categories-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .category-card img {
+
+        height: 200px;
+
+    }
+
+}
