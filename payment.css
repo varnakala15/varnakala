@@ -1,0 +1,368 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+} 
+
+body { 
+    background-color: #f4f6f9; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+} 
+
+.bill-container { 
+    background: #ffffff; 
+    width: 100%; 
+    max-width: 700px; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+} 
+
+.bill-header { 
+    text-align: center; 
+    border-bottom: 2px dashed #ddd; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+} 
+
+.bill-header h2 { 
+    color: #333; 
+    font-size: 24px; 
+} 
+
+.bill-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+} 
+
+.bill-table th,  
+.bill-table td { 
+    padding: 12px; 
+    text-align: left; 
+    border-bottom: 1px solid #eee; 
+} 
+
+.bill-table th { 
+    background-color: #2c3e50; 
+    color: #fff; 
+    text-transform: uppercase; 
+    font-size: 13px; 
+} 
+
+.bill-table td { 
+    color: #555; 
+    font-size: 14px; 
+} 
+
+.total-section { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #2c3e50; 
+    border-top: 2px solid #333; 
+    padding-top: 15px; 
+    margin-top: 10px; 
+} 
+
+/* ===================================
+   CUSTOMER DETAILS
+   =================================== */
+
+.customer-details-card { 
+    background: #ffffff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    margin-top: 20px; 
+} 
+
+.customer-details-card h3 { 
+    margin-bottom: 15px; 
+    color: #2c3e50; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 8px; 
+} 
+
+.form-row { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 15px; 
+} 
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+.full-width { 
+    width: 100%; 
+} 
+
+.half-width { 
+    width: 50%; 
+} 
+
+.form-group label { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #444; 
+    margin-bottom: 5px; 
+} 
+
+.form-group input { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    outline: none; 
+    width: 100%;
+} 
+
+.form-group input:focus { 
+    border-color: #2c3e50; 
+} 
+
+
+/* ===================================
+   PHONE NUMBER VALIDATION
+   =================================== */
+
+.form-group input.invalid { 
+    border: 2px solid #e74c3c !important; 
+    background-color: #fff5f5; 
+} 
+
+.form-group input.valid { 
+    border: 2px solid #27ae60 !important; 
+    background-color: #f5fff8; 
+} 
+
+.error-message { 
+    display: none; 
+    color: #e74c3c; 
+    font-size: 12px; 
+    margin-top: 5px; 
+    font-weight: 500; 
+} 
+
+.error-message.show { 
+    display: block; 
+} 
+
+.form-group input.invalid:focus { 
+    border-color: #e74c3c !important; 
+    outline: none; 
+} 
+
+.form-group input.valid:focus { 
+    border-color: #27ae60 !important; 
+    outline: none; 
+} 
+
+
+/* ===================================
+   PAYMENT BUTTONS
+   =================================== */
+
+.btn-group {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+/* All buttons */
+.btn {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* Continue Shopping */
+.btn-back {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.btn-back:hover {
+    background-color: #717d7e;
+}
+
+/* Download PDF */
+.btn-pdf {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-pdf:hover {
+    background-color: #2980b9;
+}
+
+/* Proceed to Pay */
+.btn-pay {
+    background-color: #27ae60;
+    color: #fff;
+    
+    /* Second row */
+    grid-column: 1 / -1;
+    
+    /* Center */
+    width: 60%;
+    justify-self: center;
+}
+
+.btn-pay:hover {
+    background-color: #219150;
+}
+
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 768px) {
+
+    body { 
+        padding: 10px; 
+        align-items: flex-start; 
+    } 
+
+    .bill-container { 
+        width: 100%; 
+        max-width: 100%; 
+        padding: 18px; 
+        margin-top: 10px; 
+    } 
+
+    .bill-header h2 { 
+        font-size: 20px; 
+    } 
+
+    /* BILL TABLE */
+    .bill-table { 
+        display: block; 
+        width: 100%; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        font-size: 12px; 
+    } 
+
+    .bill-table th, 
+    .bill-table td { 
+        padding: 10px 8px; 
+        font-size: 12px; 
+    } 
+
+    /* TOTAL */
+    .total-section { 
+        font-size: 16px; 
+        flex-wrap: wrap; 
+        gap: 10px; 
+    } 
+
+    /* CUSTOMER DETAILS */
+    .customer-details-card { 
+        padding: 15px; 
+    } 
+
+    .customer-details-card h3 { 
+        font-size: 18px; 
+    } 
+
+    .form-row { 
+        flex-direction: column; 
+        gap: 12px; 
+    } 
+
+    .full-width, 
+    .half-width { 
+        width: 100%; 
+    } 
+
+    .form-group input { 
+        width: 100%; 
+        font-size: 16px; 
+    }
+
+    /* BUTTONS */
+    .btn-group {
+        margin-top: 35px;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 13px 8px;
+    }
+
+    .btn-pay {
+        width: 70%;
+    }
+}
+
+
+/* ===================================
+   SMALL MOBILE PHONES
+   =================================== */
+
+@media screen and (max-width: 480px) {
+
+    body { 
+        padding: 8px; 
+    } 
+
+    .bill-container { 
+        padding: 12px; 
+        border-radius: 8px; 
+    } 
+
+    .bill-header h2 { 
+        font-size: 18px; 
+    } 
+
+    .customer-details-card { 
+        padding: 12px; 
+    } 
+
+    .bill-table th, 
+    .bill-table td { 
+        padding: 8px 6px; 
+        font-size: 11px; 
+    } 
+
+    .total-section { 
+        font-size: 15px; 
+    }
+
+    /* BUTTONS */
+    .btn-group {
+        margin-top: 35px;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 12px 6px;
+    }
+
+    .btn-pay {
+        width: 75%;
+    }
+}
