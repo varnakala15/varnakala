@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VarnaKala - Search Results</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="web/logo.jpg">
+
+    <style>
+        .search-page-heading {
+            text-align: center;
+            margin: 35px 15px 10px;
+        }
+
+        #search-message {
+            text-align: center;
+            margin: 12px 15px 25px;
+        }
+
+        .search-product-category {
+            margin-top: 10px;
+            color: #666;
+            font-size: 13px;
+        }
+
+        #search-product-container .box {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="web/logo.jpg" alt="VarnaKala Logo" class="main-logo">
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <ul class="Navbar">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#customers">Customers</a></li>
+        </ul>
+
+        <div class="header-icon">
+            <div class="cart-container">
+                <span id="cart-count">0</span>
+                <i class="bx bx-cart cart-icon"></i>
+            </div>
+
+            <i class="bx bx-search" id="search-icon"></i>
+        </div>
+    </header>
+
+    <div class="search-box">
+        <input
+            type="search"
+            id="site-search-input"
+            placeholder="Search products..."
+            autocomplete="off">
+    </div>
+
+    <main>
+        <h2 class="search-page-heading" id="search-heading">
+            Search Products
+        </h2>
+
+        <p id="search-message">Loading products...</p>
+
+        <section class="product-section">
+            <div class="product-container" id="search-product-container"></div>
+        </section>
+    </main>
+
+    <div id="imageModal" class="img-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
