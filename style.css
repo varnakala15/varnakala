@@ -1288,4 +1288,44 @@ header{
     #search-product-container .box img {
         height: 210px;
     }
+
+
+    /* Size Chart Download Button */
+
+.size-chart-download-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 22px;
+    border: 1px solid #a66c36;
+    border-radius: 5px;
+    background: transparent;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    
+    }
+    
+    .size-chart-download-btn:hover {
+        background: #a66c36;
+        color: #ffffff;
+    }
+    
+    .size-chart-download-btn i {
+        font-size: 18px;
+    }
+    
+    
+    /* Space below See More Products button */
+    #see-more-product-box {
+        margin-bottom: 30px;
+    }
+    
+    /* Size Chart button height */
+    #size-chart-box .size-chart-download-btn {
+        padding: 10px 22px;
+    }
 }
